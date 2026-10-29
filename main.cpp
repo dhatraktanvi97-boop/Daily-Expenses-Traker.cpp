@@ -28,7 +28,7 @@ void display()
 };
 int main()
 {
-  int choice = 0;
+  int choice=0 ;
    do
      {
        cout<<"\n****MENUE****\n"<<endl;
@@ -38,6 +38,9 @@ int main()
           cout<<"4. Show categorywise spending."<<endl;
            cout<<"5. Delete Expenses. "<<endl;
            cout<<"6. EXIT"<<endl;
+
+          cout<<"Enter your choice : "<<endl;
+         cin>>choice;
        switch(choice)
          {
            case 1: cout<<"Added Expenses.."<<endl;
@@ -64,7 +67,8 @@ int main()
            default:
            cout<<"Wrong Choice."<<endl;
          }
-     }while (choice != 2);
+        
+     }while (choice != 6);
 
   return 0;
 }
