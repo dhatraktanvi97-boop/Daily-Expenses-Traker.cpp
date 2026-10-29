@@ -51,11 +51,11 @@ int main()
            case 1:  
              cin.ignore();
             cout<<"Added Expenses.."<<endl;
-               cout<<"Date :"<<date<<endl;
+               cout<<"Date :"<<endl;
             getline(cin,date);
-               cout<<"Category :"<<category<<endl;
+               cout<<"Category :"<<endl;
                getline(cin,category);
-               cout<<"Description : "<<description<<endl;
+               cout<<"Description : "<<endl;
                getline(cin, description);
                cout<<"Amount Spend : "<<endl;
                cin>>amount;
