@@ -1,0 +1,70 @@
+# include <iostream>
+# include <string>
+using namespace std;
+
+class Expense
+{
+ private: 
+  string date;
+  string category;
+  string description;
+  double amount;
+ public:
+  Expense(string date, string category, string description, double amount)
+{
+  this-> date=date;
+  this->category=category;
+  this-> description=description;
+  this-> amount= amount;
+}
+void display()
+{
+ cout<< "Date : "<<date<<endl;
+ cout<<"Category : "<<category<<endl;
+ cout<<"Description : "<<description<<endl;
+  cout<<"Amout : "<<amount<<endl;
+}
+  
+};
+int main()
+{
+  int choice = 0;
+   do
+     {
+       cout<<"\n****MENUE****\n"<<endl;
+          cout<<"1. Add Expenses."<<endl;
+          cout<<"2. View all expenses."<<endl;
+          cout<<"3. Show total spending "<<endl;
+          cout<<"4. Show categorywise spending."<<endl;
+           cout<<"5. Delete Expenses. "<<endl;
+           cout<<"6. EXIT"<<endl;
+       switch(choice)
+         {
+           case 1: cout<<"Added Expenses.."<<endl;
+           break;
+
+           case 2: cout<<"---------"<<endl;
+           break;
+
+           case 3: cout<<"Total speanding "<< endl;
+           break;
+
+           case 4:
+           cout<<"sgsgsgwagr"<<endl;
+           break;
+
+           case 5:
+           cout<<"Deleted expenses"<<endl;
+           break;
+
+           case 6:
+           cout<<"EXIT"<<endl;
+          break;
+
+           default:
+           cout<<"Wrong Choice."<<endl;
+         }
+     }while (choice != 2);
+
+  return 0;
+}
