@@ -28,6 +28,11 @@ void display()
 };
 int main()
 {
+    string date;
+  string category;
+  string description;
+  double amount;
+    
   int choice=0 ;
    do
      {
@@ -45,18 +50,24 @@ int main()
          {
            case 1: cout<<"Added Expenses.."<<endl;
             cin.ignore();
+               cout<<"Date :"<<date<<endl;
             getline(cin,date);
-            
+               cout<<"Category :"<<category<<endl;
+               getline(cin,category);
+               cout<<"Description : "<<description<<endl;
+               getline(cin, description);
+               cout<<"Amount Spend : "<<endl;
+               cin>>amount;
            break;
 
-           case 2: cout<<"---------"<<endl;
+           case 2: cout<<"=======list of all expenses======"<<endl;
            break;
 
            case 3: cout<<"Total speanding "<< endl;
-           break;
+               break;
 
            case 4:
-           cout<<"sgsgsgwagr"<<endl;
+           cout<<"Categorized spendings"<<endl;
            break;
 
            case 5:
