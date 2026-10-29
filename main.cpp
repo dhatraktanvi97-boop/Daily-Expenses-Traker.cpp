@@ -61,7 +61,8 @@ int main()
                cin>>amount;
 
             Expense e1(date,category,description, amount);
-            e1.display();
+            cout<<"\n================Information====================\n";
+               e1.display();
            break;
          }
 
