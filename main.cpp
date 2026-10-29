@@ -48,7 +48,7 @@ int main()
          cin>>choice;
        switch(choice)
          {
-           case 1:  
+           case 1:  {
              cin.ignore();
             cout<<"Added Expenses.."<<endl;
                cout<<"Date :"<<endl;
@@ -63,6 +63,7 @@ int main()
             Expense e1(date,category,description, amount);
             e1.display();
            break;
+         }
 
            case 2: cout<<"=======list of all expenses======"<<endl;
            break;
