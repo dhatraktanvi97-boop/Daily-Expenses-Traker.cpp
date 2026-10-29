@@ -48,8 +48,9 @@ int main()
          cin>>choice;
        switch(choice)
          {
-           case 1: cout<<"Added Expenses.."<<endl;
-            cin.ignore();
+           case 1:  
+             cin.ignore();
+            cout<<"Added Expenses.."<<endl;
                cout<<"Date :"<<date<<endl;
             getline(cin,date);
                cout<<"Category :"<<category<<endl;
