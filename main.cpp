@@ -59,6 +59,9 @@ int main()
                getline(cin, description);
                cout<<"Amount Spend : "<<endl;
                cin>>amount;
+
+            Expense e1(date,category,description, amount);
+            e1.display();
            break;
 
            case 2: cout<<"=======list of all expenses======"<<endl;
