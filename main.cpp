@@ -44,6 +44,9 @@ int main()
        switch(choice)
          {
            case 1: cout<<"Added Expenses.."<<endl;
+            cin.ignore();
+            getline(cin,date);
+            
            break;
 
            case 2: cout<<"---------"<<endl;
