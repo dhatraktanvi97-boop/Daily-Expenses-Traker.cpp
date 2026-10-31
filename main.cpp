@@ -1,5 +1,6 @@
 # include <iostream>
 # include <string>
+# include <fstream> //Helps to use some data members or member fuction that will help you to store info permanently
 using namespace std;
 
 class Expense
@@ -34,6 +35,24 @@ void display()
   double getAmount()
 {
     return amount;
+}
+void saveToFile()
+{
+    ofstream fout("expenses.txt", ios::app);
+
+    if (fout.is_open())
+    {
+        fout << date << endl;
+        fout << category << endl;
+        fout << description << endl;
+        fout << amount << endl;
+
+        fout.close();
+    }
+    else
+    {
+        cout << "File could not be opened!" << endl;
+    }
 }
 };
 int main()
@@ -76,6 +95,7 @@ int main()
          if (count<100)
          {
           expenses[count] = Expense(date,category, description,amount);
+          expenses[count].saveToFile();
                 total=total+amount;
           expenses[count].display();
           count++;
