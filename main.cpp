@@ -34,6 +34,7 @@ int main()
   double amount;
     
   int choice=0 ;
+ double total=0;
    do
      {
        cout<<"\n****MENUE****\n"<<endl;
@@ -59,6 +60,7 @@ int main()
                getline(cin, description);
                cout<<"Amount Spend : "<<endl;
                cin>>amount;
+            total=total+amount;
 
             Expense e1(date,category,description, amount);
             cout<<"\n================Information====================\n";
@@ -69,7 +71,7 @@ int main()
            case 2: cout<<"=======list of all expenses======"<<endl;
            break;
 
-           case 3: cout<<"Total speanding "<< endl;
+           case 3: cout<<"Total speanding: "<<total<< endl;
                break;
 
            case 4:
