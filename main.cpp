@@ -91,6 +91,11 @@ int main()
                getline(cin, description);
                cout<<"Amount Spend : "<<endl;
                cin>>amount;
+            if (amount <= 0)
+{
+    cout << "Invalid amount! Enter a positive amount." << endl;
+    break;
+}
 
          if (count<100)
          {
