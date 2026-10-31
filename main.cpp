@@ -10,6 +10,13 @@ class Expense
   string description;
   double amount;
  public:
+Expense()
+{
+  date ="";
+ category="";
+  description = "";
+  amount = 0;
+}
   Expense(string date, string category, string description, double amount)
 {
   this-> date=date;
@@ -22,7 +29,7 @@ void display()
  cout<< "Date : "<<date<<endl;
  cout<<"Category : "<<category<<endl;
  cout<<"Description : "<<description<<endl;
-  cout<<"Amout : "<<amount<<endl;
+  cout<<"Amount : "<<amount<<endl;
 }
   
 };
@@ -32,6 +39,9 @@ int main()
   string category;
   string description;
   double amount;
+
+ Expense expenses[100];
+ int count=0;
     
   int choice=0 ;
  double total=0;
@@ -60,15 +70,37 @@ int main()
                getline(cin, description);
                cout<<"Amount Spend : "<<endl;
                cin>>amount;
-            total=total+amount;
 
-            Expense e1(date,category,description, amount);
+         if (count<100)
+         {
+          expenses[count] = Expense(date,category, description,amount);
+                total=total+amount;
+          expenses[count].display();
+          count++;
+         }
+            else
+         {
+          cout<<"\nSorry the Storage is Full!\n";
+         }
             cout<<"\n================Information====================\n";
-               e1.display();
+            
            break;
          }
 
            case 2: cout<<"=======list of all expenses======"<<endl;
+               if (count==0 )
+               {
+                   cout<<"No Expenses recorded yet!"<<endl;
+               }
+               else
+               {
+                   for (int i=0; i< count ; i++)
+                       {
+                              cout<<"===========================\n";
+                       cout<<"Expenses\n"<<i+1 <<endl;
+                       expenses[i].display();
+                       }
+               }
            break;
 
            case 3: cout<<"Total speanding: "<<total<< endl;
